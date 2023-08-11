@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location de véhicules en ligne</title>
+	 <link href="https://fonts.googleapis.com/css?family=Pinyon+Script|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <style>
+ 
+.accueil {
+  position: relative;
+  height: 0;
+  padding-bottom: 40%; /* Ratio de hauteur souhaité (par exemple 60% pour une hauteur de 517px) */
+  overflow: hidden;
+  
+}
+
+.accueil img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Modification ici pour occuper toute la hauteur disponible */
+  object-fit: cover;
+background-attachment: fixed;
+}
+@media only screen and (max-width: 1000px){
+ .accueil img{
+ width:100%;
+ height:100%;
+ }
+}	
+
+
+    </style>
+</head>
+<body>
+ <nav>
+   <ul>
+      <li class="navbar-logo"><img src=".\img\rsz_1logo.png"></li>
+	  <li class="btn"><span class="fas fa-bars"></span></li>
+      <div class="navbar-menu">
+        <li class="navbar-item"><a href="index.html">Accueil</a></li>
+        <li class="navbar-item"><a href="listesVehicules.html">Liste vehicules</a></li>
+        <li class="navbar-item"><a href="reservation.html">Reservation</a></li>
+        <li class="navbar-item"><a href="rechercheVehicule.html">Recherche</a></li>
+        <li class="navbar-item"><a href="loisirs.html">Loisirs</a></li>
+      </div>
+    </ul>
+  </nav>
+  
+   <div class="accueil">
+      <img src=".\img\accueil2.jpg">
+    </div>
+  <div class="baseline">  
+            <span class="baseline-welcome">Welcome</span>
+            <strong class="baseline-name">VISION D'AIGLE </strong>
+            <span class="baseline-slogan">Specialite Location vehicule</span>
+        </div>
+		<hr>
+   <section class="main"> 
+	 <div class="main-first">
+        <h2>Louez votre utilitaire pas cher grâce à notre comparateur</h2>
+        <p>
+		<img src="./img/accueil1.jpg" class="firstImg">
+			Notre comparateur vous permet de trouver des tarifs négociés sur une sélection d’utilitaires en location.
+			Choisissez vos dates et vos lieux de retrait et de dépôt, nous vous proposerons une liste de véhicule avec différentes marques et différents volumes. Du petit utilitaire 3m2 au camion 20 m2, effectuez votre location en quelques clics ! 
+			Vous pourrez même régler votre réservation plus tard, jusqu’à 5 jours avant la date de location et ce sans frais. 
+			De quoi effectuer votre déménagement ou vos travaux de bricolage sereinement.
+		</p>
+	</div>
+	<div class="main-second">
+		<h2>Des partenaires reconnus et des véhicules en parfait état</h2>
+		<p>	
+		<img src="./img/morgann.jpg" class="secondImg">
+		   Nous travaillons avec des entreprises de location d’utilitaire prestigieuses et présentes dans toute la France : Avis, Hertz, Europcar, Rent a Car, … Autant de noms dont vous avez déjà entendu parler et qui sont reconnus pour leur sérieux.
+           Nous vous proposons également des véhicules chez des partenaires internationaux, avec des services de qualité, testés et vérifiés par nos équipes.	
+		   La seule différence avec le fait de passer directement avec ces prestataires ? Nous négocions pour vous les meilleurs tarifs afin de vous permettre de louer votre utilitaire au meilleur prix et nous vous permettons de comparer facilement.
+		</p>
+	</div>
+	<div class="main-third">
+		<h2>Des services uniques et exclusifs sans mauvaise surprise</h2>
+		<p>
+		<img src="./img/nissan-frontier.jpg" class="firstImg">
+		  Recommandé par le Guide du Routard et par le Petit Futé notamment, BSP-Auto vous propose des services adaptés à vos besoins et aux aléas de la vie quotidienne. Vous pouvez ainsi annuler votre location d’utilitaire gratuitement jusqu’à un jour avant la date de début de votre contrat.
+	   	  Nos fiches produits détaillées vous permettent de visualiser très rapidement les informations importantes incluses dans votre contrat, tels que les assurances et le nombre de kilomètres inclus.
+		  Nous vous proposons également une série d’option pour compléter votre réservation en cas de besoin (chaînes, rehausseur, …). Et si vous ne trouvez pas votre bonheur, notre équipe se tient à votre disposition par téléphone afin de vous fournir un devis gratuit personnalisé.
+		</p>
+	</div>
+	<div class="main-quirt">
+		<h2>A propos de vision d'aigle</h2>
+		<p>
+		Idéalement situé sur une colline près du centre commercial de Delmas, c'est l'un des services location offrant une vue imprenable sur le centre-ville de Port-au-Prince ainsi que sur les maisons peintes de couleurs vives qui ornent le flanc de la montagne de Jalousie.
+        Malgré l'impact la situation de detioration du pays sur la vision d'aigle, nous nous restons le meme en terme de qualite et services offert a travers le pays. 
+		 Idéalement situé sur une colline près du centre commercial de Delmas, c'est l'un des services location offrant une vue imprenable sur le centre-ville de Port-au-Prince ainsi que sur les maisons peintes de couleurs vives qui ornent le flanc de la montagne de Jalousie.
+        Malgré l'impact la situation de detioration du pays sur la vision d'aigle, nous nous restons le meme en terme de qualite et services offert a travers le pays. 
+		 
+		</p>
+	</div>
+	
+  </section>
+  <div class="slideshow">
+  <div class="slide-container">
+    <div class="slide">
+      <img src="./img/Rolls_Royce-removebg-preview.png" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="./img/pexels-mike-bird-112460-removebg-preview.png" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="./img/Lamborghini__2_-removebg-preview.png" alt="Slide 3">
+    </div>
+	 <div class="slide">
+      <img src="./img/Ferrari-removebg-preview.png" alt="Slide 4">
+    </div>
+  </div>
+</div>
+
+  <!--<div class="main-img">
+			<img src="./img/Terios.jpg">
+			<br><img src="./img/morgann.jpg">
+	</div>-->
+ <section class="contact-section">
+        <button id="open-modal">Contactez-nous</button>
+    </section>
+
+    <!-- Boîte de dialogue modale -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+    </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Informations de contact</h3>
+        <p>Adresse : 123 Rue du Marien, Port-au-Prince, Haïti</p>
+        <p>Téléphone : <a href="#">+509 37498842 / 35071390</a></p>
+        <p>Email : <a href="#">visionaiglelocation@gmail.com</a></p>
+      </div>
+      <div class="footer-right">
+        <h3>Liens utiles</h3>
+        <ul class="footer-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="#">A propos</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#" id="open-modal">Contact</a></li>
+        </ul>
+      </div>
+	  <div class="footer-right-follow">
+        <h3>Follow </h3>
+        <span class="icon">
+	       <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+		</span>
+      </div>
+    </div>
+	<div class="copyrigth">
+	<i><center>Vision d'aigle Location Vehicule &copy 2023. Tous Droits Reserves<center></i>
+    </div>
+  </footer>
+ <script>
+         $('nav ul li.btn span').click(function(){
+           $('nav ul div.navbar-menu').toggleClass("show");
+           $('nav ul li.btn span').toggleClass("show");
+         });
+      </script>
+</body>
+</html>

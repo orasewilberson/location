@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recherche des véhicules selon un modèle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Pinyon+Script|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.bootstrap5.min.js"></script>
+   <style>
+   
+		.table-striped tbody tr:nth-of-type(odd) {
+			background-color:blue ;
+          margin:0 auto;
+            }
+
+		.table-striped tbody td {
+			color: red;
+		}
+		.dataTables_wrapper .dataTables_filter input[type="search"] {
+		  padding: 8px 30px;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+		}
+
+		.dataTables_wrapper .dataTables_filter input[type="search"]:focus {
+		  border-color: #aaa;
+		  outline: 0;
+		  box-shadow: 0 0 0 3px rgba(59, 153, 252, 0.3);
+		}
+		/* Personnalisation du DataTable pour qu'il occupe toute la largeur de l'écran */
+.dataTables_wrapper {
+  width: 75%;
+  margin:0 auto;
+}
+
+/* Personnalisation des images dans les cellules du DataTable */
+.dataTables_wrapper img {
+  width: 25%;
+  height: auto;
+}
+
+/* Personnalisation de la largeur des colonnes dans le DataTable */
+table.dataTable th,
+table.dataTable td {
+  white-space: nowrap;
+}
+
+/* Personnalisation de la police de caractères dans le DataTable */
+.dataTables_wrapper {
+  font-family: Arial, 'sans-serif';
+}
+
+/* Personnalisation de la couleur des en-têtes de colonne dans le DataTable */
+table.dataTable thead th {
+		background-color: #c4d7f5;
+}
+
+/* Personnalisation de la couleur des lignes paires dans le DataTable */
+.table-striped tbody tr:nth-of-type(even) {
+			background-color: #c4d7f5;
+}
+
+/* Personnalisation de la couleur des lignes impaires dans le DataTable */
+.table-striped tbody tr:nth-of-type(odd) {
+			background-color: #d8e0ed;
+}
+
+/* Personnalisation de la couleur du texte dans le DataTable */
+.dataTables_wrapper td,
+.dataTables_wrapper th {
+		color: #333333;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+   <ul>
+      <li class="navbar-logo"><img src=".\img\rsz_1logo.png"></li>
+	  <li class="btn"><span class="fas fa-bars"></span></li>
+      <div class="navbar-menu">
+        <li class="navbar-item"><a href="index.html">Accueil</a></li>
+        <li class="navbar-item"><a href="listesVehicules.html">Liste vehicules</a></li>
+        <li class="navbar-item"><a href="reservation.html">Reservation</a></li>
+        <li class="navbar-item"><a href="rechercheVehicule.html">Recherche</a></li>
+        <li class="navbar-item"><a href="loisirs.html">Loisirs</a></li>
+      </div>
+    </ul>
+  </nav>
+  
+
+    <section>
+		<body>
+    <table id="myTable" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+		         <th></th>
+                <th>Marque</th>
+                <th>Modele</th>
+                <!-- ... -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="./img/accueil1.jpg"></td>
+                <td>Prius</td>
+                <td>Escape</td>
+                <!-- ... -->
+            </tr>
+            <tr>
+             <td><img src="./img/nissan.jpg"></td>
+                <td>Nissan patrol</td>
+                <td>X7</td>
+                <!-- ... -->
+            </tr>
+			<tr>
+                <td><img src="./img/nissan-frontier.jpg"></td>
+                <td>nissan-frontier</td>
+                <td>Tahoe</td>
+                <!-- ... -->
+            </tr>
+            <tr>
+                <td><img src="./img/Xterra.jpg"></td>
+                <td>Prius</td>
+                <td>F-150</td>
+                <!-- ... -->
+            </tr>
+            <!-- ... -->
+			<tr>
+                <td><img src="./img/morgann.jpg"></td>
+                <td>Morgan</td>
+                <td>Escape</td>
+                <!-- ... -->
+            </tr>
+            <tr>
+             <td><img src="./img/Terios.jpg"></td>
+                <td>Terios</td>
+                <td>A-150</td>
+                <!-- ... -->
+            </tr>
+			<tr>
+                <td><img src="./img/patfinder.jpg"></td>
+                <td>Patfinder</td>
+                <td>X6</td>
+                <!-- ... -->
+            </tr>
+            <tr>
+                <td><img src="./img/robert-phelann.jpg"></td>
+                <td>robert-phelan</td>
+                <td>CR-V</td>
+                <!-- ... -->
+            </tr>
+			<tr>
+                <td><img src="./img/Nissan-quitz.jpg"></td>
+                <td>Nissan-Quitz</td>
+                <td>GLE</td>
+                <!-- ... -->
+            </tr>
+            <tr>
+             <td><img src="./img/bmww.png"></td>
+                <td>BMW</td>
+                <td>3 Series</td>
+                <!-- ... -->
+            </tr>
+			<tr>
+                <td><img src="./img/Terios.jpg"></td>
+                <td>FineArt</td>
+                <td>Camaro</td>
+                <!-- ... -->
+            </tr>
+            <tr>
+                <td><img src="./img/accueil1.jpg"></td>
+                <td>Prius</td>
+                <td>Escape</td>
+                <!-- ... -->
+            </tr>
+			<tr>
+                <td><img src="./img/nissan-frontier.jpg"></td>
+                <td>nissan-frontier</td>
+                <td>Tahoe</td>
+                <!-- ... -->
+            </tr>
+             <tr>
+                <td><img src="./img/accueil1.jpg"></td>
+                <td>Prius</td>
+                <td>Escape</td>
+                <!-- ... -->
+            </tr>
+            <tr>
+             <td><img src="./img/nissan.jpg"></td>
+                <td>Nissan patrol</td>
+                <td>X7</td>
+                <!-- ... -->
+            </tr>
+			<tr>
+                <td><img src="./img/nissan-frontier.jpg"></td>
+                <td>nissan-frontier</td>
+                <td>Tahoe</td>
+                <!-- ... -->
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable({
+                // Options et configurations ici
+            });
+        });
+    </script>
+
+    </section>
+
+   <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Informations de contact</h3>
+        <p>Adresse : 123 Rue du Marien, Port-au-Prince, Haïti</p>
+        <p>Téléphone : <a href="#">+509 37498842 / 35071390</a></p>
+        <p>Email : <a href="#">visionaiglelocation@gmail.com</a></p>
+      </div>
+      <div class="footer-right">
+        <h3>Liens utiles</h3>
+        <ul class="footer-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="#">A propos</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#" id="open-modal">Contact</a></li>
+        </ul>
+      </div>
+	  <div class="footer-right-follow">
+        <h3>Follow </h3>
+        <span class="icon">
+	       <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-youtube"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a> 
+		</span>
+      </div>
+    </div>
+	<div class="copyrigth">
+	<i><center>Vision d'aigle Location Vehicule &copy 2023. Tous Droits Reserves<center></i>
+    </div>
+  </footer>
+  <script>
+         $('nav ul li.btn span').click(function(){
+           $('nav ul div.navbar-menu').toggleClass("show");
+           $('nav ul li.btn span').toggleClass("show");
+         });
+      </script>
+</body>
+</html>

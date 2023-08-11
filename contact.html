@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire de contact</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo"><img src=".\img\rsz_1logo.png"></a>
+                <ul class="navbar-menu">
+                    <li class="navbar-item"><a href="index.html">Accueil</a></li>
+                    <li class="navbar-item"><a href="listesVehicules.html">Liste des véhicules</a></li>
+                    <li class="navbar-item"><a href="reservation.html">Réservation</a></li>
+                    <li class="navbar-item"><a href="rechercheVehicule.html">Recherche</a></li>
+                    <li class="navbar-item"><a href="loisirs.html">Loisirs</a></li>
+                </ul>
+                <div class="navbar-toggle">
+                    <span class="toggle-icon"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+<br><br><br>
+    <section class="contact-section">
+        <h1>Contactez-nous</h1>
+        <button id="open-modal">Ouvrir le formulaire</button>
+    </section>
+
+    <!-- Boîte de dialogue modale -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Informations de contact</h3>
+                <p>Adresse : 123 Rue du Marien, Port-au-Prince, Haïti</p>
+                <p>Téléphone : +509 37498842 / 35071390</p>
+                <p>Email : visionaiglelocation@gmail.com</p>
+            </div>
+            <div class="footer-right">
+                <h3>Liens utiles</h3>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
